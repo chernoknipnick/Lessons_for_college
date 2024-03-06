@@ -6,6 +6,25 @@
 int counter =0;
 
 using namespace std;
+class Persona
+{
+private:
+	string first_name = "FIRST NAME";
+	string second_name = "SECOND NAME";
+public:
+	Persona() {};
+	Persona(string name, string second_name) : first_name(name), second_name(second_name) {
+		cout << "Person " << first_name << " creat";
+	};
+	~Persona();
+};
+
+
+
+Persona::~Persona()
+{
+	std::cout << "Person " << " deleted" << std::endl;
+}
 
 void count_cout() {
 	counter++;
@@ -106,6 +125,7 @@ int main()
 	/* функция которая посдчитывает сколько раз она вызвалась*/
 	//for (int i = 0; i < 10; i++) 
 	// count_cout();
+	Persona A{"g", "g"};
 	
 
 	return 0;
